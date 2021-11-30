@@ -43,11 +43,16 @@ const printPlaylists = function() {
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
-const printTracks = function() {
-
+const printTracks = function () {
+       for (let i in library.tracks) {
+              let tracks = library.tracks[i];
+              let id = tracks.id;
+              let name = tracks.name;
+              let artist = tracks.artist;
+              let album = tracks.album;
+              console.log(`${id}: ${name} by ${artist} (${album})`);
+       }
 }
-
-
 // prints a list of tracks for a given playlist, using the following format:
 // p01: Coding Music - 2 tracks
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)

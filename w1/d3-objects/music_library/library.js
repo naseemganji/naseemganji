@@ -30,29 +30,29 @@ const library = {
 // prints a list of all playlists, in the form:
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
-const printPlaylists = function() {
-       for (let i in library.playlists) {
-              let playlists = library.playlists[i];
-              let id = playlists.id;
-              let name = playlists.name;
-              let trackCount = playlists.tracks.length;
-              console.log(`${id}: ${name} - ${trackCount} tracks`);
-       }
-}
+const printPlaylists = function () {
+  for (let i in library.playlists) {
+    let playlists = library.playlists[i];
+    let id = playlists.id;
+    let name = playlists.name;
+    let trackCount = playlists.tracks.length;
+    console.log(`${id}: ${name} - ${trackCount} tracks`);
+  }
+};
 // prints a list of all tracks, using the following format:
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 const printTracks = function () {
-       for (let i in library.tracks) {
-              let tracks = library.tracks[i];
-              let id = tracks.id;
-              let name = tracks.name;
-              let artist = tracks.artist;
-              let album = tracks.album;
-              console.log(`${id}: ${name} by ${artist} (${album})`);
-       }
-}
+  for (let i in library.tracks) {
+    let tracks = library.tracks[i];
+    let id = tracks.id;
+    let name = tracks.name;
+    let artist = tracks.artist;
+    let album = tracks.album;
+    console.log(`${id}: ${name} by ${artist} (${album})`);
+  }
+};
 // prints a list of tracks for a given playlist, using the following format:
 // p01: Coding Music - 2 tracks
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)

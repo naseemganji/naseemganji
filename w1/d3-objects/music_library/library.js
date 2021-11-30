@@ -121,13 +121,22 @@ const addPlaylist = function (name) {
        };
        console.log(library);
 }
-
-
 // STRETCH:
 // given a query string string, prints a list of tracks
 // where the name, artist or album contains the query string (case insensitive)
 // tip: use "string".search("tri") 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
-const printSearchResults = function(query) {
-
-}
+const printSearchResults = function (query) {
+  for (let trackID in library.tracks) {
+    if (
+      library.tracks[trackID].name.search(query) == -1 &&
+      library.tracks[trackID].artist.search(query) == -1 &&
+      library.tracks[trackID].album.search(query) == -1
+    ) {
+      console.log("No Match!");
+    } else {
+      console.log(library.tracks[trackID]);
+      break;
+    }
+  }
+};

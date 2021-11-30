@@ -140,3 +140,12 @@ const printSearchResults = function (query) {
     }
   }
 };
+
+printPlaylists();
+printTracks();
+printPlaylist("p01");
+addTrackToPlaylist ("t03", "p01");
+generateUid();
+console.log(addTrack("a", "b", "c"));
+console.log(addPlaylist("test"));
+printSearchResults("Hello");

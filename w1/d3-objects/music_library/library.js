@@ -75,9 +75,25 @@ const printPlaylist = function(playlistId) {
 };     
 
 // adds an existing track to an existing playlist
-const addTrackToPlaylist = function(trackId, playlistId) {
-
-}
+const addTrackToPlaylist = function (trackId, playlistId) {
+  let addTrack = library.playlists[playlistId].tracks;
+  addTrack.push(trackId);
+  let playlist = library.playlists[playlistId];
+  let id = playlist.id;
+  let name = playlist.name;
+  let trackCount = playlist.tracks.length;
+  console.log(`${id}: ${name} - ${trackCount} tracks`);
+  for (let i in playlist.tracks) {
+    let tracks = playlist.tracks[i];
+    let tracker = library.tracks[tracks];
+    let id = tracker.id;
+    let name = tracker.name;
+    let artist = tracker.artist;
+    let album = tracker.album;
+    console.log(`${id}: ${name} by ${artist} (${album})`);
+  }
+};
+     
 
 
 // generates a unique id
